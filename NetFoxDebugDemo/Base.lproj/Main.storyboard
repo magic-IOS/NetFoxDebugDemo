@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jFu-cb-Q9z">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cyz-Te-FuZ">
+            <objects>
+                <tabBarController id="jFu-cb-Q9z" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bvt-T0-Q8w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UNx-uA-xp5" kind="relationship" relationship="viewControllers" id="wFn-kB-G0H"/>
+                        <segue destination="XTw-gG-3UP" kind="relationship" relationship="viewControllers" id="wcE-Qv-2fe"/>
+                        <segue destination="ulR-Po-iSP" kind="relationship" relationship="viewControllers" id="K8n-9j-JDK"/>
+                        <segue destination="2AO-dd-nM1" kind="relationship" relationship="viewControllers" id="KLZ-j5-sst"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ixz-1m-qGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1090" y="81"/>
+        </scene>
+        <!--WKWebView-->
+        <scene sceneID="HrD-bT-rjI">
+            <objects>
+                <viewController id="2AO-dd-nM1" customClass="WKWebViewController" customModule="netfox_ios_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yU5-Va-GkS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XpM-2k-guV">
+                                <rect key="frame" x="20" y="79" width="353" height="670"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZEN-qy-eVb"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZEN-qy-eVb" firstAttribute="trailing" secondItem="XpM-2k-guV" secondAttribute="trailing" constant="20" id="CCa-DP-KYN"/>
+                            <constraint firstItem="XpM-2k-guV" firstAttribute="top" secondItem="ZEN-qy-eVb" secondAttribute="top" constant="20" id="O2a-A5-k4h"/>
+                            <constraint firstItem="XpM-2k-guV" firstAttribute="leading" secondItem="ZEN-qy-eVb" secondAttribute="leading" constant="20" id="hpH-Uz-pxo"/>
+                            <constraint firstItem="ZEN-qy-eVb" firstAttribute="bottom" secondItem="XpM-2k-guV" secondAttribute="bottom" constant="20" id="lOe-5R-GXQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="WKWebView" id="Owp-pG-SCq"/>
+                    <connections>
+                        <outlet property="webView" destination="XpM-2k-guV" id="5JX-EK-LGY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lCO-vY-kPA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87" y="1800"/>
+        </scene>
+        <!--Image-->
+        <scene sceneID="Nfa-Jr-erk">
+            <objects>
+                <viewController id="XTw-gG-3UP" customClass="ImageViewController" customModule="netfox_ios_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rQF-sB-iX1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XKq-fl-XYK">
+                                <rect key="frame" x="20" y="79" width="353" height="640"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ljj-Dc-ycP">
+                                <rect key="frame" x="0.0" y="719" width="393" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uS6-8k-hSJ"/>
+                                </constraints>
+                                <state key="normal" title="Load random image"/>
+                                <connections>
+                                    <action selector="tappedLoadImage:" destination="XTw-gG-3UP" eventType="touchUpInside" id="Jzu-Eg-H0r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r3S-nj-TKp"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ljj-Dc-ycP" firstAttribute="top" secondItem="XKq-fl-XYK" secondAttribute="bottom" id="7uM-Hk-epr"/>
+                            <constraint firstItem="r3S-nj-TKp" firstAttribute="trailing" secondItem="Ljj-Dc-ycP" secondAttribute="trailing" id="IAc-jh-Rxf"/>
+                            <constraint firstItem="r3S-nj-TKp" firstAttribute="trailing" secondItem="XKq-fl-XYK" secondAttribute="trailing" constant="20" id="JJc-A0-iWI"/>
+                            <constraint firstItem="Ljj-Dc-ycP" firstAttribute="leading" secondItem="r3S-nj-TKp" secondAttribute="leading" id="e7b-Am-8f6"/>
+                            <constraint firstItem="XKq-fl-XYK" firstAttribute="top" secondItem="r3S-nj-TKp" secondAttribute="top" constant="20" id="mbr-9V-KdI"/>
+                            <constraint firstItem="XKq-fl-XYK" firstAttribute="leading" secondItem="r3S-nj-TKp" secondAttribute="leading" constant="20" id="u3p-Q7-O4s"/>
+                            <constraint firstItem="r3S-nj-TKp" firstAttribute="bottom" secondItem="Ljj-Dc-ycP" secondAttribute="bottom" id="vxy-nJ-fxW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Image" id="TwE-o2-TTN"/>
+                    <connections>
+                        <outlet property="imageView" destination="XKq-fl-XYK" id="0vR-tQ-w4W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ihG-gT-QzW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-86" y="453"/>
+        </scene>
+        <!--Text-->
+        <scene sceneID="tuO-FG-L0y">
+            <objects>
+                <viewController id="UNx-uA-xp5" customClass="TextViewController" customModule="netfox_ios_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ww0-JB-tLn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjj-SB-KAr">
+                                <rect key="frame" x="0.0" y="719" width="393" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lsz-iE-hXQ"/>
+                                </constraints>
+                                <state key="normal" title="Tell me a joke"/>
+                                <connections>
+                                    <action selector="tappedLoad:" destination="UNx-uA-xp5" eventType="touchUpInside" id="uJt-af-aF1"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1l-7M-5Y4">
+                                <rect key="frame" x="20" y="61" width="353" height="658"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qqZ-UC-BDv"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qqZ-UC-BDv" firstAttribute="trailing" secondItem="k1l-7M-5Y4" secondAttribute="trailing" constant="20" id="4Hh-FA-zbj"/>
+                            <constraint firstItem="k1l-7M-5Y4" firstAttribute="top" secondItem="qqZ-UC-BDv" secondAttribute="top" constant="2" id="Hsm-bY-JyR"/>
+                            <constraint firstItem="qqZ-UC-BDv" firstAttribute="bottom" secondItem="hjj-SB-KAr" secondAttribute="bottom" id="NZA-jJ-jQn"/>
+                            <constraint firstItem="k1l-7M-5Y4" firstAttribute="leading" secondItem="qqZ-UC-BDv" secondAttribute="leading" constant="20" id="k9o-Ux-s8l"/>
+                            <constraint firstItem="hjj-SB-KAr" firstAttribute="leading" secondItem="qqZ-UC-BDv" secondAttribute="leading" id="lXH-kn-9ZV"/>
+                            <constraint firstItem="hjj-SB-KAr" firstAttribute="top" secondItem="k1l-7M-5Y4" secondAttribute="bottom" id="mWZ-9Z-NEy"/>
+                            <constraint firstItem="qqZ-UC-BDv" firstAttribute="trailing" secondItem="hjj-SB-KAr" secondAttribute="trailing" id="sMn-UC-0C0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Text" id="KLz-l5-oDG"/>
+                    <connections>
+                        <outlet property="textView" destination="k1l-7M-5Y4" id="YoY-pN-xOQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uw7-8N-prQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87" y="-263"/>
+        </scene>
+        <!--Webview-->
+        <scene sceneID="Z2Z-qP-lZr">
+            <objects>
+                <viewController id="ulR-Po-iSP" customClass="WebViewController" customModule="netfox_ios_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qDI-2q-8a6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="loI-UT-lu0">
+                                <rect key="frame" x="20" y="79" width="353" height="670"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                            </webView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3hY-rf-vKG"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3hY-rf-vKG" firstAttribute="trailing" secondItem="loI-UT-lu0" secondAttribute="trailing" constant="20" id="9oj-ez-UMR"/>
+                            <constraint firstItem="3hY-rf-vKG" firstAttribute="bottom" secondItem="loI-UT-lu0" secondAttribute="bottom" constant="20" id="NKc-Vw-9m2"/>
+                            <constraint firstItem="loI-UT-lu0" firstAttribute="top" secondItem="3hY-rf-vKG" secondAttribute="top" constant="20" id="QMO-sw-y6O"/>
+                            <constraint firstItem="loI-UT-lu0" firstAttribute="leading" secondItem="3hY-rf-vKG" secondAttribute="leading" constant="20" id="xLC-vR-BbX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Webview" id="pJ4-V7-Vpl"/>
+                    <connections>
+                        <outlet property="webView" destination="loI-UT-lu0" id="nSz-BT-Jfu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5W7-Rp-5Cj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-87" y="1129"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
